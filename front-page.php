@@ -79,6 +79,7 @@ if ($item) {
 
 
 <div id="grid-isotope-seals" class="row align-center align-top">
+
 <?php
 
     $recentPosts = new WP_Query();

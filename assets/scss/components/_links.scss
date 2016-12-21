@@ -6,3 +6,22 @@
 [data-whatinput="touch"] a:focus, button:focus {
   outline: none;
 }
+a.txt-white:hover {
+	color: $white;
+}
+.outlined {
+	padding: 1rem;
+	 outline-width: 0px;
+	 outline-color: transparent;
+  outline-style: dashed;
+  outline-offset: -7rem;
+          transition: all 0.3s ease-out; 
+}
+.outlined:hover {
+	  color: $color4;
+  outline-width: 1rem;
+    outline-style: solid;
+ outline-color: rgba(255,255,255,0.9);
+ outline-offset: 0px;
+ z-index:10;
+}

@@ -1,0 +1,225 @@
+::selection {
+  background-color: $color3;
+  color: $white;
+}
+
+.big {
+    @include breakpoint(medium) {
+    font-size: $global-font-size * 1.5;
+  }
+    @include breakpoint(large) {
+    font-size: $global-font-size * 1.75;
+  }
+      @include breakpoint(xlarge) {
+    font-size: $global-font-size * 2;
+  }
+  
+}
+#seals-select {
+  background-color: $black;
+  color: $white;
+  border:none;
+}
+#seals-select option:hover {
+    background-color: $color3;
+  color: $white;
+}
+
+.full-height {
+	min-height: 100vh;
+}
+.full-box-height {
+  min-height:100%;
+  height:100%;
+}
+.mid-height {
+	height: 50vh;
+}
+.quart-height {
+	height: 25vh;
+}
+.tier-height {
+	height: 33vh;
+}
+.CoverImage {
+  background-position: 50%;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size:  cover;
+  background-color: transparent;
+}
+.bg-fixed {
+  background-attachment: fixed;
+}
+.bg-dark {
+	background-color: #000046;
+}
+.bg-gray {
+  background-color: $dark-gray;
+}
+.bg-medium-gray {
+  background-color: $medium-gray;
+}
+.bg-light-gray {
+  background-color: $light-gray;
+}
+.bg-light {
+  background-color: $white;
+}
+.centered  {
+  display: block;
+  width:100%;
+    position: absolute;
+    z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.alphalayer::before {
+  content:"";
+  position: absolute;
+  z-index:0;
+  display: block;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,70,0.8);
+}
+.alphalayer-light::before {
+  content:"";
+  position: absolute;
+  z-index:0;
+  display: block;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  background-color: rgba(255,255,255,0.7);
+}
+.on-top {
+  position:relative;
+  z-index: 1;
+}
+article .seal-card {
+  background-color: rgba(255,255,255,0.7);
+  transition: all 0.3s ease-out;
+}
+article .seal-card:hover {
+  background-color: rgba(0,0,70,0.6);
+}
+article .seal-card a {color:$color1}
+article .seal-card a:hover {
+  color: $white;
+}
+.bg-diag::after {
+    content:"";
+  position: absolute;
+  z-index:0;
+  display: block;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  background-image: linear-gradient(-45deg,
+                                                    $color1 0,  
+                                                    $color1 20%,
+
+                                                    transparent 20%,    
+                                                    transparent 80%, 
+                                                  
+
+                                                   $color1 80%,    
+                                                    $color1 100%
+                                                    ); 
+ background-attachment: scroll;
+  background-size:  100% auto;
+  background-color:transparent;
+}
+.block {
+  display: block;
+}
+.full-block {
+  width:100%;
+  height:100%;
+}
+
+@include mui-series {
+.gpg-slide {
+  @include mui-queue();
+  @include mui-animation(slide, fade);
+    animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+}
+  @include mui-series {
+
+  .gpg-slide-1 {
+  @include mui-queue(1s, 0s, fade($from: 0, $to: 1), slide($direction: bottom));
+  }
+  .gpg-slide-2 {
+  @include mui-queue(1s, 0s, fade($from: 0, $to: 1), slide($direction: up));
+  }
+  .gpg-slide-3 {
+  @include mui-queue(0.5s, 0s, fade($from: 0, $to: 1), slide($direction: up));
+  }
+}
+div#preloader { 
+  position: fixed;
+   left: 0;
+    top: 0;
+     z-index: 999;
+      width: 100%;
+       height: 100%;
+        overflow: visible;
+          }
+
+.single .items img {
+ margin: 0.5rem 0;
+ border-radius: 1%;
+  transition: all 0.25s ease-in;
+}
+.single .items img:hover {
+
+}
+.single .items {
+  border-top: 0.5rem solid $color1;
+}
+.single article .items ul {
+  list-style: none;
+}
+article.main-content {
+        margin:0;
+      padding:0;
+}
+#footer-container {
+  background-color: #F7F4F0;
+}
+.pattern1 {
+  background: transparent url("https://guide.parisiangentleman.fr/wp-content/uploads/background-pattern01.png") repeat-x left bottom;
+padding-bottom: 400px;
+}
+.pattern2 {
+  background: transparent url("https://guide.parisiangentleman.fr/wp-content/uploads/background-pattern02.png") repeat-x left bottom;
+padding-bottom: 400px;
+}
+.pattern3 {
+  background: transparent url("https://guide.parisiangentleman.fr/wp-content/uploads/background-pattern03.png") repeat-x left bottom;
+padding-bottom: 400px;
+}
+.border-btm {
+  border-bottom: 0.5rem solid $color1;
+}
+.smallbrd {
+border: 1px solid #f4f4f4;
+}
+.smallmrg {
+  margin: 10px;
+}
+a.boxshadow:hover {
+box-shadow: 0px 0px 10px 4px #656565;
+}
+.polaroid {
+  border: 1rem solid $white;
+  border-bottom: 3rem solid $white;
+}

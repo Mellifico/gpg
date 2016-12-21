@@ -46,23 +46,30 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(2400);
 $global-lineheight: 1.5;
+
+$color1: #000046;
+$color2: #ffdc69;
+$color3: #0000a8;
+$color4: #009c73;
+$color5: #5400bb;
+
 $foundation-palette: (
-  primary: #2199e8,
-  secondary: #777,
-  success: #3adb76,
-  warning: #ffae00,
-  alert: #ec5840,
+  primary: $color1,
+  secondary: $color5,
+  success: $color4,
+  warning: $color2,
+  alert: $color3,
 );
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
-$black: #0a0a0a;
+$black: $color1;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: "adobe-garamond-pro",Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -70,7 +77,7 @@ $global-weight-normal: normal;
 $global-weight-bold: bold;
 $global-radius: 0;
 $global-text-direction: ltr;
-$global-flexbox: false;
+$global-flexbox: true;
 $print-transparent-backgrounds: true;
 
 @include add-foundation-colors;
@@ -81,11 +88,11 @@ $print-transparent-backgrounds: true;
 $breakpoints: (
   small: 0,
   medium: 640px,
-  large: 1024px,
-  xlarge: 1200px,
-  xxlarge: 1440px,
+  large: 1200px,
+  xlarge: 1440px,
+  xxlarge: 1680px,
 );
-$breakpoint-classes: (small medium large);
+$breakpoint-classes: (small medium large xlarge xxlarge);
 
 // 3. The Grid
 // -----------
@@ -108,12 +115,12 @@ $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
   small: (
-    'h1': 24,
-    'h2': 20,
-    'h3': 19,
-    'h4': 18,
-    'h5': 17,
-    'h6': 16,
+    'h1': 34,
+    'h2': 30,
+    'h3': 29,
+    'h4': 28,
+    'h5': 27,
+    'h6': 26,
   ),
   medium: (
     'h1': 48,
@@ -122,6 +129,22 @@ $header-sizes: (
     'h4': 25,
     'h5': 20,
     'h6': 16,
+  ),
+    large: (
+    'h1': 66,
+    'h2': 58,
+    'h3': 51,
+    'h4': 45,
+    'h5': 40,
+    'h6': 36,
+  ),
+    xlarge: (
+    'h1': 78,
+    'h2': 70,
+    'h3': 61,
+    'h4': 55,
+    'h5': 50,
+    'h6': 46,
   ),
 );
 $header-color: inherit;
@@ -139,8 +162,8 @@ $code-font-weight: $global-weight-normal;
 $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
-$anchor-color: $primary-color;
-$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+$anchor-color: $dark-gray;
+$anchor-color-hover: $color1;
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
@@ -148,7 +171,7 @@ $hr-border: 1px solid $medium-gray;
 $hr-margin: rem-calc(20) auto;
 $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
-$list-style-type: disc;
+$list-style-type: circle;
 $list-style-position: outside;
 $list-side-margin: 1.25rem;
 $list-nested-side-margin: 1.25rem;
@@ -262,8 +285,8 @@ $buttongroup-expand-max: 6;
 
 $callout-background: $white;
 $callout-background-fade: 85%;
-$callout-border: 1px solid rgba($black, 0.25);
-$callout-margin: 0 0 1rem 0;
+$callout-border: 0px solid rgba($black, 0.25);
+$callout-margin: 1rem 0 1rem 0;
 $callout-padding: 1rem;
 $callout-font-color: $body-font-color;
 $callout-font-color-alt: $body-background;
@@ -339,7 +362,7 @@ $form-label-font-size: rem-calc(14);
 $form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 1.8;
 $select-background: $white;
-$select-triangle-color: #333;
+$select-triangle-color: $white;
 $select-radius: $global-radius;
 $input-color: $black;
 $input-placeholder-color: $medium-gray;
@@ -558,7 +581,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0;
-$topbar-background: #121212;
+$topbar-background: $color1;
 $topbar-submenu-background: $topbar-background;
 $topbar-link-color: #fff;
 $topbar-input-width: 200px;
